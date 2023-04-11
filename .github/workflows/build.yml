@@ -1,13 +1,10 @@
-# sample-workflow-windows-latest
-# docs are in the repo
-
-name: AWS Lambda Code Analysis 
-on: push
+name: AWS Lambda Code Analysis
+on:
+  push:
     branches:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
-
 jobs:
   sample:
     name: AWS Lambda.NET Code Analysis runner
