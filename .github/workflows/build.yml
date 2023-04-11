@@ -36,7 +36,7 @@ jobs:
       uses: ./
       id: code-analysis
       with:
-        project: .\aws_lambda.sln
+        project: aws_lambda.sln
         build-breaking: true
         style: minimum
         all-categories: none
