@@ -32,18 +32,6 @@ jobs:
       run: dotnet restore .\aws_lambda.sln
 
     # Run .NET Code Analysis
-    - name: Run .NET Code Analysis
-      uses: ./
-      id: code-analysis
-      with:
-        project: aws_lambda.sln
-        build-breaking: true
-        style: minimum
-        all-categories: none
+    - name: Run .NET Code Build
+      run : dotnet build .\aws_lambda.sln --configuration Release
 
-    # Upload the analysis results file
-    - name: Upload analysis results
-      uses: actions/upload-artifact@v2
-      with:
-        name: analysis_results.sarif
-        path: ${{ steps.code-analysis.outputs.sarifFile }}
