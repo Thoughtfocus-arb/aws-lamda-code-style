@@ -65,8 +65,8 @@ namespace aws_lambda_style_demo
         public async Task<GetAccountSettingsResponse> callLambda()
         {
             //var a = 10;
-            var request = new GetAccountSettingsRequest();
-            var response = await lambdaClient.GetAccountSettingsAsync(request);
+            GetAccountSettingsRequest request = new GetAccountSettingsRequest();
+            GetAccountSettingsResponse response = await lambdaClient.GetAccountSettingsAsync(request);
             return response;
         }
 
