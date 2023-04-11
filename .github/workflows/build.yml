@@ -16,7 +16,7 @@ jobs:
     steps:
 
       # Checkout your code repository to scan
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     # Ensure compatible versions of dotnet are installed.
     # The [Microsoft Code Analysis CLI](https://aka.ms/mscadocs) is built with dotnet v3.1.201.
