@@ -1,14 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Amazon;
-using Amazon.Util;
 using Amazon.Lambda;
 using Amazon.Lambda.Model;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.SQSEvents;
-using Amazon.XRay.Recorder.Core;
 using Amazon.XRay.Recorder.Handlers.AwsSdk;
 using System.IO;
 
@@ -16,7 +11,7 @@ using System.IO;
 [assembly: CLSCompliant(true)]
 namespace aws_lambda_style_demo
 {
-  public class MyFunction 
+    public class MyFunction
     {
         private AmazonLambdaClient lambdaClient;
 
@@ -25,7 +20,7 @@ namespace aws_lambda_style_demo
             initialize();
         }
 
-        async void initialize()
+        private async void initialize()
         {
             AWSSDKHandler.RegisterXRayForAllServices();
             lambdaClient = new AmazonLambdaClient();
@@ -70,7 +65,7 @@ namespace aws_lambda_style_demo
             return response;
         }
 
-       
+
     }
-   
+
 }
