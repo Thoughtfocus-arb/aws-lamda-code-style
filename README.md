@@ -51,7 +51,7 @@ below are basic build action of dotnet build action which automatically trigger 
 
     # Run .NET Code Analysis
     - name: Run .NET Code Build
-      run : dotnet build .\aws_lambda.sln --configuration Release
+      run : dotnet build .\\AWS.Lambda.Reference.sln --configuration Release
  
 
 ```
