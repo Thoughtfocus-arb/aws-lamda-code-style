@@ -9,7 +9,7 @@ using System.IO;
 
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 [assembly: CLSCompliant(true)]
-namespace aws_lambda_style_demo
+namespace AWS.Lambda.CodeStyleReference
 {
     public class MyFunction
     {

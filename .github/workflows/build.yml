@@ -29,9 +29,9 @@ jobs:
 
     # Run NuGet restore
     - name: Run NuGet restore
-      run: dotnet restore .\aws_lambda.sln
+      run: dotnet restore .\AWS.Lambda.Reference.sln
 
     # Run .NET Code Analysis
     - name: Run .NET Code Build
-      run : dotnet build .\aws_lambda.sln --configuration Release
+      run : dotnet build .\AWS.Lambda.Reference.sln --configuration Release
 
